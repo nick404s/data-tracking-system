@@ -1,0 +1,254 @@
+{
+  "household": {
+    "emailAddress": "test1@email.com",
+    "homeType": "House",
+    "bedrooms": 5,
+    "occupants": 3,
+    "squareFootage": 1400,
+    "postalCode": "91702"
+  },
+  "phone": {
+    "areaCode": "123",
+    "phoneNumber": "456789",
+    "phoneType": "other"
+  },
+  "bathroom": [
+    {
+      "bathroomBase": {
+        "bathroomOrdinal": 1,
+        "commodesCount": 1,
+        "sinksCount": 1,
+        "bidetsCount": 1
+      },
+      "bathroomType": "half",
+      "bathroomOther": {
+        "bathroomName": "idk bathroom"
+      }
+    },
+        {
+      "bathroomBase": {
+        "bathroomOrdinal": 2,
+        "commodesCount": 2,
+        "sinksCount": 2,
+        "bidetsCount": 2
+      },
+      "bathroomType": "full",
+      "bathroomOther": {
+        "bathtubCount": 1,
+        "showerCount": 2,
+        "tubShowerCount": 3,
+        "primaryBathroom": true
+      }
+    }
+  ],
+  "appliance": [
+    {
+      "applianceType": "RefrigiratorFreezer",
+      "applianceBaseData": {
+        "applianceOrder": 1,
+        "modelName": "a",
+        "manufacturerName": "Panasonic"
+      },
+      "applianceOtherData": {
+        "refrigeratorFreezerType": "upright freezer"
+      }
+    },
+        {
+      "applianceType": "Dryer",
+      "applianceBaseData": {
+        "applianceOrder": 2,
+        "modelName": "b",
+        "manufacturerName": "Panasonic"
+      },
+      "applianceOtherData": {
+        "heatSource": "gas"
+      }
+    },
+        {
+      "applianceType": "Washer",
+      "applianceBaseData": {
+        "applianceOrder": 3,
+        "modelName": "c",
+        "manufacturerName": "Panasonic"
+      },
+      "applianceOtherData": {
+        "loadingType": "top"
+      }
+    },
+        {
+      "applianceType": "TV",
+      "applianceBaseData": {
+        "applianceOrder": 4,
+        "modelName": "d",
+        "manufacturerName": "Panasonic"
+      },
+      "applianceOtherData": {
+        "displaySize": 55,
+        "displayType": "DLP",
+        "maxResolution": "720p"
+      }
+    },
+        {
+      "applianceType": "Cooker",
+      "applianceBaseData": {
+        "applianceOrder": 5,
+        "modelName": "",
+        "manufacturerName": "Sanyo"
+      },
+      "applianceOtherData": {
+        "cookerData": [
+          {
+            "cookerType": "Oven",
+            "cookerItemData": {
+              "ovenType": "convection",
+              "heatSource": [
+                {"heatSource": "gas"},
+                {"heatSource": "electric"},
+                {"heatSource": "microwave"}
+              ]
+            }
+          },
+          {
+            "cookerType": "Cooktop",
+            "cookerItemData": {
+              "heatSource": "radiant electric"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+{
+  "household": {
+    "emailAddress": "test1@email.com",
+    "homeType": "House", /*['House', 'apartment', 'townhome', 'condominium', 'mobile home']*/
+    "bedrooms": 5,
+    "occupants": 3,
+    "squareFootage": 1400,
+    "postalCode": "91702"
+  },
+  "phone": {  /*OPTIONAL*/
+    "areaCode": "123",
+    "phoneNumber": "456789",
+    "phoneType": "other"  /*['home', 'mobile', 'work', 'other']*/
+  },
+  "bathroom": [
+    {
+      "bathroomBase": {
+        "bathroomOrdinal": 1,
+        "commodesCount": 1,
+        "sinksCount": 1,
+        "bidetsCount": 1
+      },
+      "bathroomType": "half",
+      "bathroomOther": {
+        "bathroomName": "idk bathrrom" /*optional*/
+      }
+    },
+        {
+      "bathroomBase": {
+        "bathroomOrdinal": 2,
+        "commodesCount": 2,
+        "sinksCount": 2,
+        "bidetsCount": 2
+      },
+      "bathroomType": "full",
+      "bathroomOther": {
+        "bathtubCount": 1,
+        "showerCount": 2,
+        "tubShowerCount": 3,
+        "primaryBathroom": true
+      }
+    }
+  ],
+  "appliance": [
+    {
+      "applianceType": "RefrigiratorFreezer",
+      "applianceBaseData": {
+        "applianceOrder": 1,
+        "modelName": "a",  /*optional*/
+        "manufacturerName": "Panasonic"
+      },
+      "applianceOtherData": {
+        "refrigeratorFreezerType": "upright freezer"  /*['Bottom freezer refrigerator', 'French door refrigerator', 'side-by-side refrigerator',
+                         'top freezer refrigerator', 'chest freezer', 'upright freezer']*/
+      }
+    },
+        {
+      "applianceType": "Dryer",
+      "applianceBaseData": {
+        "applianceOrder": 2,
+        "modelName": "b", /*optional*/
+        "manufacturerName": "Panasonic"
+      },
+      "applianceOtherData": {
+        "heatSource": "string"  /*['gas', 'electric', 'none']*/
+      }
+    },
+        {
+      "applianceType": "Washer",
+      "applianceBaseData": {
+        "applianceOrder": 3,
+        "modelName": "c",  /*optional*/
+        "manufacturerName": "Panasonic"
+      },
+      "applianceOtherData": {
+        "loadingType": "top"  /*['top', 'front']*/
+      }
+    },
+        {
+      "applianceType": "TV",
+      "applianceBaseData": {
+        "applianceOrder": 4,
+        "modelName": "d",  /*optional*/
+        "manufacturerName": "Panasonic"
+      },
+      "applianceOtherData": {
+        "displaySize": 55,
+        "displayType": "DLP",  /*['tube', 'DLP', 'plasma', 'LCD', 'LED']*/
+        "maxResolution": "720p",  /*['480i', '576i', '720p', '1080i', '1080p', '1440p', '2160p (4K)', '4320p (8K)']*/
+      }
+    },
+        {
+      "applianceType": "Cooker",
+      "applianceBaseData": {
+        "applianceOrder": 5,
+        "modelName": "",  /*optional*/
+        "manufacturerName": "Sanyo"
+      },
+      "applianceOtherData": {
+        "cookerData": [
+          {
+            "cookerType": "Oven",
+            "cookerItemData": {
+              "ovenType": "convection",  /*['convection', 'conventional']*/
+              "heatSource": [
+                {"heatSource": "gas"},
+                {"heatSource": "electric"},
+                {"heatSource": "microwave"}
+              ]
+            }
+          },
+          {
+            "cookerType": "Cooktop",
+            "cookerItemData": {
+              "heatSource": "radiant electric" /*['gas', 'electric', 'radiant electric', 'induction'])*/
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

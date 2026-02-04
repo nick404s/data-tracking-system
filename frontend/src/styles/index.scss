@@ -1,0 +1,28 @@
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+.nav-link,
+.link-button{
+
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.review-line-header{
+    display: inline-block;
+    width: 15.0rem;
+    padding-left: 0.5rem;
+}
+
+.ordinal-divider{
+    border-bottom: 1px solid #cbcbcb;
+    margin-bottom: 1rem;
+}
+
+.text-bold{
+    font-weight: 800;
+    
+}

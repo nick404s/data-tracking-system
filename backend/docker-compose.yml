@@ -1,0 +1,48 @@
+# run command: "docker-compose up"
+version: "3.8"
+
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn app.main:app --host 0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - 80:8000
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/cs6400
+    depends_on:
+      - db
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=cs6400
+  db-seed:
+    build:
+      context: ./db_load_data
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+#  react-app:
+#    build:
+#      context: ./team001_p3_frontend_gui
+#    volumes:
+#      - .:/react-app
+#    ports:
+#      - 3000:3000
+#    image: app:react
+#    container_name: react_container
+#    command: npm start
+
+volumes:
+  postgres_data:
