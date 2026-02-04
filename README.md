@@ -4,3 +4,4 @@
 - Python/Fast API
 - JavaScript/React
 - SQL/PostgreSQL
+- Docker/Compose
